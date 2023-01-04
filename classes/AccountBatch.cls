@@ -21,6 +21,7 @@ global class AccountBatch implements Database.Batchable<sObject>{
             }
         }  
         Database.update(accList);
+        system.debug('abcd');
     }
     global void finish(Database.BatchableContext bc){
         
