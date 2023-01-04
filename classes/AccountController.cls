@@ -19,6 +19,7 @@ public class AccountController {
         }
        
         acc2 = [Select Id,Name,Industry,(Select Id,lastname from contacts) from Account where id= :accId];
+        System.debug('acc2' +acc2);
     }
 
 }
