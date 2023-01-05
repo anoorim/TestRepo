@@ -52,6 +52,7 @@ public class AdharPanPassportController {
         
         system.debug('Value---' +selvalue);
         system.debug('Options----' +options);
+		system.debug('Options2----' +options2);
         
         if(selvalue=='None')
         {      

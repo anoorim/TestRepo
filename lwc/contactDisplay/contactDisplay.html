@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Display Contact Information">
+        <lightning-input name="FirstName" label="First Name" type="text" value={firstname} onchange={handleInput}></lightning-input>
+        <lightning-input name="LastName" label="Last Name" type="text" value={lastname} onchange={handleInput}></lightning-input>
+        <lightning-button name="Submit" label="Submit" onclick={getContactData}></lightning-button>
+    </lightning-card>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={conData}
+                columns={conColumns}>
+        </lightning-datatable>
+    </div>  
+</template>

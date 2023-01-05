@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="wire service jest testing demo">
+        <div class="slds-var-m-around_medium">
+            <template if:true = {contactData}>
+                <template for:each={contactData} for:item="con">
+                    <p key={con.Id}>{con.Name}</p>
+                </template>
+            </template>
+            <template if:true = {errorVal}>
+                <p>{errorVal}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

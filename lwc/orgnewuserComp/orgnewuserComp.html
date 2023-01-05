@@ -1,0 +1,40 @@
+<template>
+
+    <div class="slds-m-bottom_small">
+        <h2>Add Registered User</h2>
+    </div>
+
+    <lightning-radio-group
+        options={options}
+        value={value}
+        onchange={handleChange}
+        class="radio-combo-inline"
+                       type="radio">
+    </lightning-radio-group>
+    <lightning-layout>
+        <lightning-layout-item padding="around-small" size="8" flexibility="auto">
+                <lightning-input type="text"
+                    value={searchValue}
+                    label={searchLabel}
+                    onchange={searchKeyword}>
+                </lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4" flexibility="auto">
+            <div class="slds-var-m-top_large slds-var-p-right_medium">
+            <lightning-button label="Search"
+                onclick={handleSearch}
+                variant="brand">
+            </lightning-button>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+  
+    <template if:true={hasData}>
+        <lightning-datatable
+                key-field="id"
+                data={userData}
+                columns={columns}>
+        </lightning-datatable>
+    </template>
+
+</template>
